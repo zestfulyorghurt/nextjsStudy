@@ -6,7 +6,7 @@ import {
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
-const links = [
+const linksList = [
   { name: 'Home', href: '/dashboard', icon: HomeIcon },
   {
     name: 'Invoices',
@@ -19,7 +19,7 @@ const links = [
 export default function NavLinks() {
   return (
     <>
-      {links.map((link) => {
+      {linksList.map((link) => {
         const LinkIcon = link.icon;
         return (
           <a
