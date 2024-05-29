@@ -1,4 +1,5 @@
 import type { NextAuthConfig } from 'next-auth';
+import { redirect } from 'next/navigation';
  
 export const authConfig = {
   pages: {
@@ -17,8 +18,7 @@ export const authConfig = {
         console.log("==================")
         console.log(nextUrl)
         console.log("==================")
-        // return Response.redirect(new URL('/dashboard', nextUrl));
-        return Response.redirect('/dashboard');
+        return Response.redirect(new URL('/dashboard', nextUrl));
       }
       return true;
     },
