@@ -18,7 +18,7 @@ export const authConfig = {
         console.log(nextUrl)
         console.log("==================")
         // return Response.redirect(new URL('/dashboard', nextUrl));
-        return Response.redirect(new URL('/dashboard'));
+        return Response.redirect('/dashboard');
       }
       return true;
     },
