@@ -28,7 +28,6 @@ export const { auth, signIn, signOut } = NextAuth({
                 const { email, password } = parsedCredentials.data;
                 const user = await getUser(email);
                 if (!user) return null;
-                
                 // const hashedPassword = bcrypt.hashSync(password, 10);
 
                 const passwordsMatch = await bcrypt.compare(password, user.password);
